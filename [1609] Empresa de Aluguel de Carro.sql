@@ -51,4 +51,5 @@ FK_StatusAluguel INT,
 CONSTRAINT FOREIGN KEY (FK_StatusAluguel) REFERENCES Status(IdStatus)
 );
 
-CREATE TABLE Transacoes();
+CREATE TABLE Transacoes(
+);
