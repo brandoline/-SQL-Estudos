@@ -69,7 +69,11 @@ INSERT INTO Projeto(Nome, DataInicio, DataFim, FK_IdStatus, FK_IdFuncionarios, F
 ('Carro IA', '2024-03-10', NULL, 1, 2, 2),
 ('Music Player', '2024-01-23', '2024-02-29', 3, 1, 1);
 
-SELECT Nome, DataInicio, DataFim, StatusProjeto.NomeStatus AS Status FROM Projeto
-JOIN StatusProjeto ON StatusProjeto.IdStatus = Projeto.FK_IdStatus;
+SELECT Projeto.Nome, Projeto.DataInicio, Projeto.DataFim, 
+StatusProjeto.NomeStatus AS Status, 
+Funcionarios.Nome AS Funcionarios 
+FROM Projeto
+JOIN StatusProjeto ON StatusProjeto.IdStatus = Projeto.FK_IdStatus
+JOIN Funcionarios ON Funcionarios.IdFuncionarios = Projeto.Fk_IdFuncionarios;
 
 
