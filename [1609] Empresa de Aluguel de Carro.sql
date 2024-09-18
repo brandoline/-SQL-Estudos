@@ -16,7 +16,7 @@ Nome VARCHAR(255),
 CPF CHAR(11),
 Telefone CHAR(11),
 FK_IdEndereco INT,
-CONSTRAINT FOREIGN KEY (FK_IdEndereco) REFERENCES Endereco(IdEndereco)
+CONSTRAINT FOREIGN KEY (FK_IdEndereco) REFERENCES EnderecoEmpresa(IdEndereco)
 );
 
 CREATE TABLE Status(
